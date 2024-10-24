@@ -15,4 +15,5 @@ def search_max_number_parameter(list_param):  ###[6,9,4,10]
             num_max_p = i
     return num_max_p
 
-     
+def structures_control():
+    pass     

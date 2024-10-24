@@ -1,6 +1,7 @@
 from operators import sum_func, rest_func, mult_func, div_func
 from calc import complex_calc
 from algorithms import search_max_number, search_max_number_parameter
+
 def main_menu():
     while True:    
         print("***Selecciona la operacion que deseas***")
@@ -11,7 +12,7 @@ def main_menu():
         print("*.* Presiona 5 Para FUNCIÓN CALCULADORA COMPLEJA")
         print("*.* Presiona 6 Para BUSCA EL NUMERO MAYOR (algoritmo simple)")
         print("*.* Presiona 7 Para BUSCA EL NUMERO MAYOR (con parametros)")
-        #print("*.* Presiona # Para BUSCA EL NUMERO MAYOR")
+        print("*.* Presiona 8 Para ESTRUCTURAS DE CONTROL")
         print("--------------------------------------------------------")
         print("*** Presiona 0 Para SALIR ***")
 
@@ -45,14 +46,15 @@ def main_menu():
             complex_calc()
             
         elif opc == 6:
-            #print("ALGORÍTMOS")
             search_max_number()
             
         elif opc == 7:
-            #print("ALGORÍTMOS")
-            list_param = [6,9,4,10]
+            list_param = list(map(int, input("Ingresa una lista de Numeros: ").split(',')))
             res = search_max_number_parameter(list_param)
             print("El NUMERO MAYOR ES: ", res)
+            
+        elif opc == 8:
+            pass
         
         else:
             print("No Has Seleccionado Un Número, Vuelve A Seleccionar")
