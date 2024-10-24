@@ -1,7 +1,13 @@
 def complex_calc():
-    print("DENTRO DE CALCULADORA COMPLEJA")
+
+    num01 = int(input("Ingrese un numero"))
+    
+    operator = input("ingrese un operador + - x /")
+    
+    num02 = int(input("Ingrese un numero"))
     
     
-if __name__ == "__calc__":
-    complex_calc()
+    
+    
+    
     
