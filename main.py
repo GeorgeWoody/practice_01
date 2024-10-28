@@ -1,25 +1,24 @@
 from operators import sum_func, rest_func, mult_func, div_func
 from calc import complex_calc
 from algorithms import search_max_number, search_max_number_parameter
-
+from control_structures import control_flow, pair_number
 def main_menu():
     while True:    
         print("***Selecciona la operacion que deseas***")
-        print("*.* Presiona 1 Para SUMAR")
+        print("*.* Presiona 1 Para 'CALCULADORA'")
         print("*.* Presiona 2 Para RESTAR")
         print("*.* Presiona 3 Para MULTIPLICAR")
         print("*.* Presiona 4 Para DIVIDIR")
         print("*.* Presiona 5 Para FUNCIÓN CALCULADORA COMPLEJA")
         print("*.* Presiona 6 Para BUSCA EL NUMERO MAYOR (algoritmo simple)")
         print("*.* Presiona 7 Para BUSCA EL NUMERO MAYOR (con parametros)")
-        print("*.* Presiona 8 Para ESTRUCTURAS DE CONTROL")
-        print("--------------------------------------------------------")
+        print("*.* Presiona 8 Para CONTROL DE FLUJO 'IF'")
+        print("*.* Presiona 9 SABER SI NUMERO ES PAR'")
         print("*** Presiona 0 Para SALIR ***")
 
-        try:
-            opc = int(input("Seleciona Tu Opción: "))
-        except ValueError:
-            print("Opcion No Válida, Ingresa Un Número Entero")
+        
+        opc = int(input("Seleciona Tu Opción: "))
+        #print("Opcion No Válida, Ingresa Un Número Entero")
             
         if opc == 0:
             print("Saliendo......")
@@ -54,7 +53,11 @@ def main_menu():
             print("El NUMERO MAYOR ES: ", res)
             
         elif opc == 8:
-            pass
+            control_flow()
+            
+        elif opc == 9:
+            pair_number()
+            
         
         else:
             print("No Has Seleccionado Un Número, Vuelve A Seleccionar")
