@@ -3,7 +3,7 @@ def sum_func():
         try: ### Intentar Validar las Variables Ingresadas como 'int' ###
             num01 = int(input("Ingrese el primer número: "))
             num02 = int(input("Ingrese el segundo número: "))
-        except ValueError: ### Si NO son Eneteros, imprimir... ###
+        except ValueError: ### Si NO son Enteros, imprimir... ###
             print("Has Ingresado Un Valor que NO es 'ENTERO'\nVuelve A Ingresar Un Número")
             continue ### Permite al while True (ciclo infinito)volver al Inicio y pedir que se vuelvan a ingresar los datos correctos ###
         

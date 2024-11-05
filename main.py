@@ -1,5 +1,5 @@
 from operators import sum_func, rest_func, mult_func, div_func
-from calc import complex_calc
+from calc import calculator
 from algorithms import search_max_number, search_max_number_parameter
 from control_structures import control_flow, pair_number
 def main_menu():
@@ -25,8 +25,8 @@ def main_menu():
             break
         
         if opc == 1:
-            print("Has seleccionado SUMA")
-            sum_func()
+            print("Has seleccionado 'CALCULADORA'")
+            calculator()
 
         elif opc == 2:
             print("Has seleccionado RESTA")
