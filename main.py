@@ -5,8 +5,8 @@ from control_structures import control_flow, pair_number
 def main_menu():
     while True:    
         print("***Selecciona la operacion que deseas***")
-        print("*.* Presiona 1 Para 'CALCULADORA'")
-        print("*.* Presiona 2 Para RESTAR")
+        print("*.* Presiona 1 Para 'CALCULADORA FINAL'")
+        print("*.* Presiona 2 Para CALCULADORA SENCILLA 01")
         print("*.* Presiona 3 Para MULTIPLICAR")
         print("*.* Presiona 4 Para DIVIDIR")
         print("*.* Presiona 5 Para FUNCIÓN CALCULADORA COMPLEJA")
