@@ -39,7 +39,7 @@ def calculator():
                 operator = input("Ingrese la operación a realizar, o presione 'q' para salir: ")
                 
                 if operator in operators:
-                    opc_operator = operators[operator](,)
+                    opc_operator = operators[operator]
                 
                 
             except ValueError:
@@ -47,12 +47,12 @@ def calculator():
 
     
     
-    #if operator.lower() == 'q':
-    #    print("Has salido...")
-    #    break
-    #
-    #num02 = float(input("Ingrese un número: "))
-#
+            if operator.lower() == 'q':
+                print("Has salido...")
+                break
+    
+            num02 = float(input("Ingrese un número: "))
+
     #if operator in operators:
     #    res = operators[operator](num01, num02)
 #

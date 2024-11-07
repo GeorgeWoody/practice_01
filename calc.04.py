@@ -1,7 +1,6 @@
 import os
 os.system('cls' if os.name =='nt' else 'clear')
 
-
 def sum(x,y):
     return x + y
         
@@ -23,7 +22,6 @@ operators = {
     '*' : mult,
     '/' : div
 }
-
 
 def calculator_02():
     while True:    
@@ -47,7 +45,7 @@ def calculator_02():
         
         continue    
         
-        var_num = float(input("Ingrese un numero: "))
+    var_num = float(input("Ingrese un numero: "))
 
         
     
