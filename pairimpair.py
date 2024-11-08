@@ -1,4 +1,4 @@
-def sums(iterable):
+def sum_funct(iterable):
     total = 0
     for i in iterable:
         total = total + i
@@ -18,7 +18,7 @@ def pair_impair():
         else:
             impairs.append(i)
 
-    total_pair = sums(pairs) #Importante: El resultado de la funcion y su argumento ya procesado, se debe guardar en una variable para poder ser mostrado
+    total_pair = sum_funct(pairs) #Importante: El resultado de la funcion y su argumento ya procesado, se debe guardar en una variable para poder ser mostrado
     # total_pair = 0
     # for x in pairs:
     #    new_num_pair = x
@@ -35,6 +35,5 @@ def pair_impair():
     print("Summed Impairs: ", total_impair)
 
 
-pair_impair()
 
 pair_impair()
