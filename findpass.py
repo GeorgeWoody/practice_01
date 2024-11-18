@@ -1,16 +1,16 @@
 def find_pass():
     key_word = 'clave123'
-    i=3
-    for i in range(3-1):
+    for i in range(3):
         user_key_word = input("Input Key Word (Only 3 Tries): ")
         if key_word == user_key_word:
             print("Keyword 'clave123' Found")
             return
         else:
-            print("Try Again, ", i,  "Tries Left")
-
-        if i in range(3) == 0:
-            break
+            attempts_left = 2 - i
+            if attempts_left > 0:
+                print(attempts_left," Attempts Left")
+            else:
+                print("Have No Attempts Left")
 
 find_pass()
 
@@ -33,7 +33,7 @@ condicionales para verificar si la contraseña es correcta y limitar el número 
     corre el bucle en un iterable."""
 
 
-"""
+""" FIRST ATTEMPT
 def find_pass():
     key_word = 'clave123'
 
@@ -47,4 +47,24 @@ def find_pass():
 
         if i in range(3) == 2:
             break
+"""
+
+"""SECOND ATTEMPT
+def find_pass():
+    key_word = 'clave123'
+    for i in range(3):
+        user_key_word = input("Input Key Word (Only 3 Tries): ")
+        if key_word == user_key_word:
+            print("Keyword 'clave123' Found")
+            return
+        elif 3-i-1 == 2:
+            print("Try Again, ", 3-i-1,  "Tries Left")
+
+        elif 3-i-1 == 1:
+            print("Try Again, ", 3 - i - 1, "Tries Left")
+
+        else:
+            print("No tienes mas intentos")
+
+find_pass()
 """
