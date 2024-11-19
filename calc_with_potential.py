@@ -10,6 +10,8 @@ def div(x,y):
         return None
     else:
         return x/y
+    
+def pot
 
 operators = {
     '+':sums,
