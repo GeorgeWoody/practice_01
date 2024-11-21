@@ -47,10 +47,4 @@ def calculator_02():
         
     var_num = float(input("Ingrese un numero: "))
 
-        
-    
-        
-
-
-
 calculator_02()
