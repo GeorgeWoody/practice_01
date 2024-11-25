@@ -1,6 +1,5 @@
 import random
 
-
 def hangman():
 
     print("Bienvenido al AHORCADO")
@@ -21,10 +20,14 @@ def hangman():
         "manzana", "pera", "uva", "pluma", "pan", "queso", "carro", "tren", "camion", "bici"
     ]
 
-    selected_word = choice(WORDS)
+    selected_word = random.choice(WORDS)
+    print(selected_word)
+    hidden_word = ['_' for _ in selected_word]
+    print(" ".join(hidden_word))
 
 
 
 
 
 
+hangman()
