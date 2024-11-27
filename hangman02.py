@@ -2,15 +2,15 @@ import random
 
 def hangman():
 
-    print("Bienvenido al AHORCADO")
-    print("     i----I")
-    print("     i    I")
-    print("     O    I")
-    print("    /I\   I")
-    print("   / I \  I")
-    print("    / \   I")
-    print("   /   \  I")
-    print("----------I")
+    print(r"Bienvenido al AHORCADO")
+    print(r"     i----I")
+    print(r"     i    I")
+    print(r"     O    I")
+    print(r"    /I\   I")
+    print(r"   / I \  I")
+    print(r"    / \   I")
+    print(r"   /   \  I")
+    print(r"----------I")
 
     WORDS = [
         "perro", "gato", "casa", "arbol", "coche", "lapiz", "papel", "libro", "mesa", "silla",
@@ -20,31 +20,51 @@ def hangman():
         "manzana", "pera", "uva", "pluma", "pan", "queso", "carro", "tren", "camion", "bici"
     ]
 
-    selected_word = random.choice(WORDS)
-    print(selected_word)
-    hidden_word = ['_' for _ in selected_word]
-    print(" ".join(hidden_word))
+    selected_word = random.choice(WORDS)            ### Declaro la palabra aleatoria.
+    print(selected_word)                            ### Este print es solo de prueba, debe eliminarse o comentarse.
+    hidden_word = ['_' for _ in selected_word]      ### Represento la palabra con guiones bajos, se recorre con 'for' y un índice 'sin importancia _ ' .(solo importa la cantidad de letras).
+    attemps = 6                                     ### Se declara la cantidad de intentos.
 
 
-#hangman()
+
+    guessed_letter = set()  #(1.-)# Variable que almacena las letras ingresadas con 'set()'. Debe ser fuera del while, para que no se limpie y guarde la acumulación ingresada.
+
+    while attemps > 0 and '_' in hidden_word:   #(2.-)# El programa seguirá pidiendo letras 'mientras'(while):Intentos > a 0 Y existan '_' en la palabra escondida (hidden_word)
+        print(" ".join(hidden_word))
+        print(f"\nINTENTOS RESTANTES: {attemps}\n")
+        print(f"\nLETRAS ADIVINADAS: " )
 
 
-def test_sets():
-    guessed_letter = set()
-    while True:
-        user_input = input("Input Letter: ")
-        if user_input != 1 and user_input.isalpha():
+
+        user_input = input("INGRESA LETRA: ")
+        if len(user_input) != 1 or not user_input.isalpha():
+            print("INGRESA SOLO 1 LETRA")
 
 
         if user_input in guessed_letter:
-            print("Letter Exist")
+            print("\n### LETRA EXISTE ###\n")
         else:
             guessed_letter.add(user_input)
-            print("Letter Dont Exist")
+            print("\n### LETRA NO EXISTE ###\n")
 
 
 
-test_sets()
+
+hangman()
+
+
+#### EXPLICACIONES ###
+"""
+    #(1.-)# Un 'set' (conjunto) en Python es una colección desordenada de elementos únicos. Los conjuntos no 
+            permiten elementos duplicados, lo que los hace ideales para almacenar cosas que no deben repetirse, 
+            como las letras adivinadas en este caso.
+    
+    #(2.-)# El programa seguirá pidiendo letras 'mientras'(while):Intentos > a 0 Y existan '_' en la palabra escondida (hidden_word)
+
+
+
+            
+"""
 
 
 
